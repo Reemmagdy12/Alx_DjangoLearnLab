@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form_example</title>
+</head>
+
+<body>
+    <h1>Form_example</h1>
+    <form method="post">
+        <!-- CSRF tokens to protect against CSRF attacks -->
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
