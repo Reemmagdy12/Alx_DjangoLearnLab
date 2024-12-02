@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block title %}Posts{% endblock %}
-{% block content %}
-<h1>Your Post</h1>
-{% for post in posts %}
-<li>{{post.title}} by {{post.author}} : {{post.content}} in {{post.published_date}}</li>
-{% endfor %}
-{% endblock %}
