@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Comments{% endblock %}
+{% block content %}
+<h1>Blog Comments</h1>
+{% for comment in comments %}
+    <h2><a href="{% url 'comment-detail' comment.id %}">{{ comment.author }}</a></h2>
+    <p>{{ comment.content|slice:":100" }}...</p>
+{% endfor %}
+{% endblock %}
